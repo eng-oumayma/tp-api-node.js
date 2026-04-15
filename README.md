@@ -1,3 +1,20 @@
+# tp-api-nodejs
+
+![CI Tests](https://github.com/eng-oumayma/tp-api-node.js/actions/workflows/ci.yml/badge.svg)
+![Coverage](https://github.com/eng-oumayma/tp-api-node.js/actions/workflows/coverage.yml/badge.svg)
+
+API REST de gestion des étudiants construite avec Node.js, Express et MongoDB.
+
+## Lancer le projet
+
+```bash
+npm install
+npm run dev
+
+
+
+
+
 # TP API Node.js + MongoDB
 
 API REST de gestion d'étudiants développée avec Node.js, Express et MongoDB.
@@ -11,3 +28,5 @@ npm install
 ## Lancement
 
 npm run dev
+
+
