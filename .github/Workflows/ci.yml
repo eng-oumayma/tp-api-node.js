@@ -29,7 +29,7 @@ jobs:
         # actions/checkout clone votre dépôt sur le runner
 
       # Étape 2 : Installer Node.js
-      - name: 🟢 Installer Node.js 20
+      - name: Installer Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: '20'
