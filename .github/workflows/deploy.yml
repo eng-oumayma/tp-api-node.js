@@ -32,12 +32,16 @@ jobs:
           chmod 600 ~/.ssh/ec2_key
           ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts 2>/dev/null || true
         
-      - name: 📦 Installer rsync
-        run: sudo apt-get update && sudo apt-get install -y rsync
+      - name: 📦 Vérifier rsync
+        run: |
+            which rsync || true
+            rsync --version || true
 
       # 3. Copier les fichiers sur le serveur
       - name: 📦 Envoyer les fichiers au serveur
-        run: |
+        run:  |
+          sudo apt-get update
+          sudo apt-get install -y rsync
           rsync -avz --delete \
             --exclude '.git' \
             --exclude 'node_modules' \
